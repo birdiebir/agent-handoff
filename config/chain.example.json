@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "chain": ["claude", "codex", "agy"],
+  "baton_script": "",
+  "card_dir": "~/handoff-cards",
+  "work_paths": ["~/work"],
+  "work_keywords": ["ClientAlpha", "ClientBeta", "ProjectOrion", "confidential"],
+  "limits": {
+    "max_user_messages": 10,
+    "max_chars": 15000,
+    "max_message_chars": 3000,
+    "tool_summary_chars": 100
+  },
+  "list_hours": 24,
+  "cwd_lookup_hours": 168,
+  "shared_files_forbidden": ["PROJECT.md", "TODO.md"],
+  "baton_prompt": "",
+  "rules_labels": {},
+  "adapters": {
+    "claude": {
+      "exe": "claude",
+      "projects_dir": "~/.claude/projects",
+      "rules_file": "~/.claude/CLAUDE.md",
+      "native_import": false
+    },
+    "codex": {
+      "exe": "codex",
+      "profile": "handoff",
+      "sessions_dir": "~/.codex/sessions",
+      "index_file": "~/.codex/session_index.jsonl",
+      "import_ledger": "~/.codex/external_agent_session_imports.json",
+      "rules_file": "~/.codex/AGENTS.md",
+      "native_import": true,
+      "native_import_from": ["claude"],
+      "import_timeout_sec": 60,
+      "hook_import_timeout_sec": 15
+    },
+    "agy": {
+      "exe": "agy",
+      "brain_dirs": ["~/.gemini/antigravity/brain", "~/.gemini/antigravity-cli/brain"],
+      "rules_file": "~/.gemini/GEMINI.md",
+      "history_files": ["~/.gemini/antigravity-cli/history.jsonl", "~/.gemini/antigravity/history.jsonl"],
+      "recent_fallback_sec": 120,
+      "native_import": false,
+      "allow_work_projects": false
+    }
+  }
+}

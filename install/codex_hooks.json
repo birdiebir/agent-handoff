@@ -1,0 +1,16 @@
+{
+  "description": "agent-handoff 草稿：登記 WT_SESSION 對應的對話。路徑換成實際位置；install.py --apply 會產生正式版並合併進 ~/.codex/hooks.json。首次執行要在 Codex 用 /hooks 信任。",
+  "hooks": {
+    "SessionStart": {
+      "hooks": [
+        {
+          "type": "command",
+          "timeout": 5,
+          "statusMessage": "agent-handoff 登記分頁",
+          "command": "\"<path-to-python.exe>\" -X utf8 -I \"<path-to-agent-handoff>/hooks/session_start.py\" --cli codex",
+          "commandWindows": "\"<path-to-python.exe>\" -X utf8 -I \"<path-to-agent-handoff>\\hooks\\session_start.py\" --cli codex"
+        }
+      ]
+    }
+  }
+}

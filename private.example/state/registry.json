@@ -1,0 +1,6 @@
+{
+ "00000000-0000-0000-0000-000000000000": [
+  {"cli": "claude", "session_id": "11111111-2222-3333-4444-555555555555", "cwd": "C:/path/to/project",
+   "transcript_path": "<home>/.claude/projects/.../11111111-....jsonl", "time": "2026-10-21T10:00:00"}
+ ]
+}

@@ -1,0 +1,6 @@
+# guard/scan.py 的個資名單範本。複製成 private/blocklist.txt（不進 git）再填自己的。
+# 每行一條，不分大小寫：一般字串照字面比對；以 re: 開頭的是正規式。# 開頭是註解。
+# 內建規則（email、使用者家目錄路徑）不用寫在這裡。
+Jane Doe
+Example Corp
+re:\bproject-?x\b
